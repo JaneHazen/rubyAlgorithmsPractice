@@ -76,3 +76,29 @@ end
 input = [8, 7, 6, 7, 6, 5, 4, 3, 2, 3, 4, 3]
 key = 3
 find_first_instance(input, key)
+
+def find_restaurant(list1, list2)
+    restaurants = {}
+    solution = []
+    lowest = 
+    list2.each_with_index do |name, index|
+        restaurants[name] = index
+    end
+    list1.each_with_index do |name, index|
+        if restaurants[name]
+            sum = restaurants[name] + index
+            p sum
+            p lowest
+
+            if sum < lowest 
+            p solution
+                solution.clear
+            p solution
+                solution.push(name)
+            elsif sum == lowest || lowest ==0
+                solution.push(name)
+            end 
+        end 
+    end 
+    solution
+end
